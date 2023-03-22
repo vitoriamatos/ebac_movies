@@ -1,0 +1,109 @@
+@use 'variables';
+
+.characters {
+    margin-bottom: 7rem;
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 30px;
+
+        &__item {
+            display: flex;
+            justify-content: center;
+
+            &__img {
+
+                width: 250px;
+                height: 250px;
+                border: 8px solid transparent;
+                border-radius: 50%;
+                background-image: linear-gradient(white, white), linear-gradient(180deg, #b8a922, #585321);
+                background-origin: border-box;
+                background-clip: content-box, border-box;
+            }
+        }
+
+
+    }
+
+}
+@media screen and (max-width: 280px) {
+    .characters {
+        display: flex;
+        justify-content: center;
+        padding-left: 40px;
+        &__list {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            padding: 2rem;
+            padding-right: 2rem;
+
+            img {
+                width: 150px;
+                height: 150px;
+                border: 4px solid transparent;
+            }
+        }
+    }
+}
+@media screen and (min-width: 281px) and (max-width: 767px) {
+    .characters {
+        display: flex;
+        justify-content: center;
+        &__list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            padding: 2rem;
+            padding-right: 2rem;
+
+            img {
+                width: 150px;
+                height: 150px;
+                border: 4px solid transparent;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .characters {
+        display: flex;
+        justify-content: center;
+        &__list {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1f 1fr;
+            gap: 15px;
+            padding: 2rem;
+            padding-right: 2rem;
+
+            img {
+                width: 150px;
+                height: 150px;
+                border: 4px solid transparent;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1280px) {
+    .characters {
+        display: flex;
+        justify-content: center;
+        &__list {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1f 1fr;
+            gap: 15px;
+            padding: 2rem;
+            padding-right: 2rem;
+
+            img {
+                width: 150px;
+                height: 150px;
+                border: 4px solid transparent;
+            }
+        }
+    }
+}

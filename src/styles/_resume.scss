@@ -1,0 +1,157 @@
+@use 'variables';
+
+@property --gradient-angle {
+	syntax: "<angle>";
+	initial-value: 0deg;
+	inherits: false;
+}
+
+@keyframes rotation {
+	0% { --gradient-angle: 0deg; }
+	100% {--gradient-angle: 360deg; }
+}
+:root {
+	--clr-1: #052b2f;
+	--clr-2: #073438;
+	--clr-3: #ff6600;
+	--clr-4: #ffee00;
+	--clr-5: #eeffff;
+}
+
+
+@property --gradient-angle {
+	syntax: "<angle>";
+	initial-value: 0deg;
+	inherits: false;
+}
+
+@keyframes rotation {
+	0% { --gradient-angle: 0deg; }
+	100% {--gradient-angle: 360deg; }
+}
+
+.resume {
+    margin-bottom: 15rem;
+    margin-top: 10rem;
+    h2{
+        margin-bottom: 5rem;
+        display: flex;
+        justify-content: center;
+    }
+    
+    &__video{
+        display: flex;
+        justify-content: center;
+
+        &__item{
+            height: 720px;
+            width: 1280px;
+            aspect-ratio: 1 / 1.5;
+            background: var(--clr-2);
+            border-radius: 0.5rem;
+            position: relative;
+            display:flex;
+            align-items: center;
+            text-align: center;
+            box-shadow: inset 1px 1px 8px #000000;
+            
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                inset: -0.3rem;
+                z-index:-1;
+                background: conic-gradient(
+                from var(--gradient-angle),
+                    var(--clr-3),
+                    var(--clr-4),
+                    var(--clr-5),
+                    var(--clr-4),
+                    var(--clr-3));
+                border-radius: inherit;
+                animation: rotation 15s linear infinite;
+                opacity: 0.5;
+            }
+            &::after {
+                filter: blur(3.5rem);
+            }
+
+            iframe {
+                color :white;
+                font-size: 3rem;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 280px) {
+    .resume {
+        display: flex;
+        justify-content: center;
+        padding-left: 40px;
+        &__video{
+
+            &__item{
+                height: 200px;
+                width: 200px;
+
+                iframe{
+                height: 200px;
+                width: 200px;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 281px) and (max-width: 767px) {
+    .resume {
+        &__video{
+
+            &__item{
+                height: 250px;
+                width: 250px;
+
+                iframe{
+                height: 250px;
+                width: 250px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .resume {
+        &__video{
+
+            &__item{
+                height: 620px;
+                width: 620px;
+
+                iframe{
+                height: 620px;
+                width: 620px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1280px) {
+
+    .resume {
+        &__video{
+
+            &__item{
+                height: 400px;
+                width: 600px;
+
+                iframe{
+                height: 400px;
+                width: 600px;
+                }
+            }
+        }
+    }
+}

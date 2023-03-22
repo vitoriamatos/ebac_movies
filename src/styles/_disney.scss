@@ -1,0 +1,73 @@
+.disney {
+    padding: 5.6vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+    img {
+        max-width: 100%;
+    }
+
+    &__text_container {
+        padding: 0 2vw;
+        margin-top: 2rem;
+        h2 {
+            margin-bottom: 24px;
+        }
+    }
+}
+@media screen and (max-width: 280px) {
+    .disney {
+
+        grid-template-columns: 1fr;
+       margin-left: 40px;
+        img {
+            max-width: 100%;
+        }
+
+        &__text_container {
+            text-align: center;
+            margin-top: 2rem;
+            h2 {
+                margin-bottom: 24px;
+            }
+        }
+    }
+}
+@media screen and (min-width: 281px) and (max-width: 767px) {
+    .disney {
+
+        grid-template-columns: 1fr;
+       
+        img {
+            max-width: 100%;
+        }
+
+        &__text_container {
+            text-align: center;
+            margin-top: 2rem;
+            h2 {
+                margin-bottom: 24px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .disney {
+
+        grid-template-columns: 1fr;
+
+        img {
+            max-width: 100%;
+        }
+
+        &__text_container {
+            text-align: center;
+    
+            h2 {
+                margin-bottom: 24px;
+            }
+        }
+    }
+}

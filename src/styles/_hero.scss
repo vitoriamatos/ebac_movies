@@ -1,0 +1,98 @@
+@use 'variables';
+.hero{
+    padding:  12vw;
+    min-height: 80vhs;
+    background-image: url(../images/workspace.png);
+    background-repeat: no-repeat;
+    text-align: left;
+    
+    &__content {
+        max-width: 800px;
+
+        &__branding {
+            max-width: 320px;
+            margin: 0;
+
+          
+        }
+
+        &__branding__logo {
+            width: 200%;
+        }
+
+        
+
+        .title--small {
+            margin-bottom: 64px;
+        }
+
+    }
+}
+
+
+@media screen and (max-width: 280px) {
+    .hero{
+        width: 331px;
+        padding:  20vw;
+        min-height: 18vhs;
+        background-image: url(../images/workspace-mobile.png);
+
+        &__content {
+            &__branding__logo {
+                width: 100%;
+            }
+        }
+
+        h3{
+            font-size: 18px;
+            text-align: center;
+        }
+    }
+}
+@media screen and (min-width: 281px) and (max-width: 767px) {
+    .hero{
+        padding:  20vw;
+        min-height: 12vhs;
+        background-image: url(../images/workspace-mobile.png);
+        &__content {
+            &__branding__logo {
+                width: 100%;
+            }
+        }
+        h3{
+            font-size: 16px;
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .hero{
+        padding:  10vw;
+        min-height: 12vhs;
+        background-image: url(../images/workspace-tablet.png);
+        
+        h3{
+            font-size: 20px;
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1280px) {
+    .hero{
+        padding:  10vw;
+        min-height: 12vhs;
+        background-image: url(../images/worskpace-hub.png);
+        &__content {
+            &__branding__logo {
+                width: 200%;
+                margin-left: 5rem;
+            }
+        }
+        h3{
+            font-size: 20px;
+            text-align: center;
+        }
+    }
+}
